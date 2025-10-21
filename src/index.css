@@ -6,6 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* === NAVBAR === */
 .navbar {
   background-color: #355e3b;
   color: #f5f3f0;
@@ -58,18 +59,10 @@ html {
 }
 
 .nav-links a:hover {
-  color: #c4a484; /* coffee-gold accent */
+  color: #c4a484;
 }
 
-.nav-links li {
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.nav-links li:hover {
-  color: #d4af37;
-}
-
+/* === HERO === */
 .hero {
   height: 90vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
@@ -121,79 +114,188 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* === CARD SECTION === */
-
-/* === FEATURED DRINKS SECTION === */
-
+/* === CARD SECTIONS (Featured + Menu) === */
 .card-section {
   background-color: #f5f3f0;
   padding: 4rem 2rem;
   text-align: center;
+  border-top: 3px solid #c4a48410;
+  border-bottom: 3px solid #c4a48410;
 }
 
 .featured-heading {
   color: #355e3b;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: relative;
 }
 
-/* Layout for horizontal display */
+.featured-heading::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #c4a484;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* === CARD CONTAINER === */
 .card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Individual Card Styles */
+/* === CARD === */
 .card {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f9f7f4;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
   padding: 1.5rem;
-  width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 5px solid #355e3b;
+  min-height: 500px; /* keeps uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
+/* === CARD IMAGE === */
 .card-image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 1rem;
+  background-color: #ddd; /* fallback color */
 }
 
 .card .title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: #3b2f2f;
+  color: #3e2c23;
   margin-bottom: 0.5rem;
 }
 
-.card .description {
-  font-size: 1rem;
-  color: #5b5b5b;
-  line-height: 1.5;
+.card .category {
+  font-size: 0.9rem;
+  color: #6b5b4c;
+  background-color: #eae2da;
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  font-style: italic;
 }
 
+.card .description {
+  color: #4a3f35;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card .price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #3e2c23;
+  margin-bottom: 1rem;
+}
+
+/* === ABOUT US SECTION === */
+
+.about-section {
+  background-color: #f5f3f0; /* same as other sections */
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  color: #3e2c23; /* espresso brown for text */
+}
+
+/* Matches Featured & Menu heading style */
+.about-section h2 {
+  color: #355e3b; /* deep coffee green */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.about-section h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #c4a484; /* coffee-gold accent */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Paragraph text styling — same font as cards */
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #4a3f35;
+  margin-bottom: 1rem;
+}
+
+/* Optional subtle divider (for visual rhythm) */
+.about-section hr {
+  width: 80px;
+  border: none;
+  border-top: 2px solid #c4a484;
+  margin: 2rem auto;
+}
+
+/* === ORDER BUTTON === */
+.order-button {
+  background-color: #3e2c23;
+  color: #f9f7f4;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-button:hover {
+  background-color: #5a3c2a;
+  transform: scale(1.05);
+}
+
+/* === FOOTER === */
 .footer {
-  background-color: #2e3b2b; /* deep rustic green */
-  color: #f5f3ef; /* soft cream text */
+  background-color: #2e3b2b;
+  color: #f5f3ef;
   text-align: center;
   padding: 1rem 0;
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   margin-top: 3rem;
-  border-top: 2px solid #c4a484; /* subtle coffee-gold accent */
+  border-top: 2px solid #c4a484;
 }
 
 .footer p {

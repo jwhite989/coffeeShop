@@ -16,6 +16,12 @@ function Header() {
             <a href="#featured">Featured</a>
           </li>
           <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+          <li>
             <a href="#contact">Contact</a>
           </li>
         </ul>
