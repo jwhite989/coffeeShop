@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer id="contact" className="footer">
+    <footer id="footer" className="footer">
       <p>&copy; 2025 A Bean Above — Crafted with ☕ by Justin White</p>
     </footer>
   );

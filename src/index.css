@@ -224,7 +224,7 @@ html {
   background-color: #f5f3f0; /* same as other sections */
   padding: 4rem 2rem;
   text-align: center;
-  font-family: system-ui, sans-serif;
+  font-family: "Playfair Display", serif;
   color: #3e2c23; /* espresso brown for text */
 }
 
@@ -319,6 +319,114 @@ html {
 
 .total {
   color: #355e3b;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #f5f3f0; /* keep the soft beige background around the form */
+  color: #3e2c23;
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+/* Form Container */
+.contact-form {
+  background-color: #f9f7f4; /* match card background */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.contact-form h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: #2d3e2f; /* match section headings */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.contact-form h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #d6b66a; /* gold underline */
+  border-radius: 2px;
+}
+
+/* Layout */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: 600;
+  color: #3a2c21; /* match drink title text color */
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+/* Inputs & Textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1.5px solid #eae2da;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #3e2c23;
+  background-color: #efe6dc; /* match “Available: Hot” beige tone */
+  transition: all 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a0896c;
+  box-shadow: 0 0 5px rgba(160, 137, 108, 0.4);
+  background-color: #fff;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Button */
+.submit {
+  background-color: #3e2c23; /* dark brown like “Order Now” */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.submit:hover {
+  background-color: #4d2d18;
+  transform: translateY(-2px);
 }
 
 /* === FOOTER === */

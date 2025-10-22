@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -102,6 +103,7 @@ function App() {
           />
         </div>
       </section>
+      <Contact />
       <Footer />
     </div>
   );
