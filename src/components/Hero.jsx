@@ -1,4 +1,5 @@
 import Button from "./Button";
+import "../styles/Hero.css";
 
 function Hero() {
   return (

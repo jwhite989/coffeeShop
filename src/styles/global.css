@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === ABOUT US SECTION === */
+
+.about-section {
+  background-color: #f5f3f0; /* same as other sections */
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #3e2c23; /* espresso brown for text */
+}
+
+/* Matches Featured & Menu heading style */
+.about-section h2 {
+  color: #355e3b; /* deep coffee green */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.about-section h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #c4a484; /* coffee-gold accent */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Paragraph text styling — same font as cards */
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #4a3f35;
+  margin-bottom: 1rem;
+}
+
+/* Optional subtle divider (for visual rhythm) */
+.about-section hr {
+  width: 80px;
+  border: none;
+  border-top: 2px solid #c4a484;
+  margin: 2rem auto;
+}

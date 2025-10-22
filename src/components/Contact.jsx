@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
+import '../styles/Contact.css'
 
 function Contact() {
   const [name, setName] = useState("");

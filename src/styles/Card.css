@@ -1,0 +1,156 @@
+/* === CARD SECTIONS (Featured + Menu) === */
+.card-section {
+  background-color: #f5f3f0;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 3px solid #c4a48410;
+  border-bottom: 3px solid #c4a48410;
+}
+
+.featured-heading {
+  color: #355e3b;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.featured-heading::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #c4a484;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* === CARD CONTAINER === */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === CARD === */
+.card {
+  background-color: #f9f7f4;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  padding: 1.5rem;
+  min-height: 500px; /* keeps uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* === CARD IMAGE === */
+.card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  background-color: #ddd; /* fallback color */
+}
+
+.card .title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3e2c23;
+  margin-bottom: 0.5rem;
+}
+
+.card .category {
+  font-size: 0.9rem;
+  color: #6b5b4c;
+  background-color: #eae2da;
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.card .description {
+  color: #4a3f35;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card .price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #3e2c23;
+  margin-bottom: 1rem;
+}
+
+/* === ORDER BUTTON === */
+.order-button {
+  background-color: #3e2c23;
+  color: #f9f7f4;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.order-button:hover {
+  background-color: #5a3c2a;
+  transform: scale(1.05);
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.adjust-button {
+  background-color: #3e2c23;
+  color: #f9f7f4;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.adjust-button:hover {
+  background-color: #594132;
+  transform: scale(1.05);
+}
+
+.quantity,
+.total {
+  font-weight: 600;
+  color: #3e2c23;
+  margin-top: 0.5rem;
+}
+
+.total {
+  color: #355e3b;
+}

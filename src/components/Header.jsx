@@ -1,4 +1,5 @@
 import coffeeShop from "../assets/coffeeShop.png";
+import "../styles/Header.css";
 
 function Header() {
   return (
