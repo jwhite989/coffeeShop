@@ -285,6 +285,42 @@ html {
   transform: scale(1.05);
 }
 
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.adjust-button {
+  background-color: #3e2c23;
+  color: #f9f7f4;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.adjust-button:hover {
+  background-color: #594132;
+  transform: scale(1.05);
+}
+
+.quantity,
+.total {
+  font-weight: 600;
+  color: #3e2c23;
+  margin-top: 0.5rem;
+}
+
+.total {
+  color: #355e3b;
+}
+
 /* === FOOTER === */
 .footer {
   background-color: #2e3b2b;
