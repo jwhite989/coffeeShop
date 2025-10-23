@@ -1,5 +1,6 @@
 import coffeeShop from "../assets/coffeeShop.png";
 import "../styles/Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,19 +12,16 @@ function Header() {
         </div>
         <ul className="nav-links">
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#featured">Featured</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <a href="#menu">Menu</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
