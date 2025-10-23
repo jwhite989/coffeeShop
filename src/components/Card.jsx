@@ -9,21 +9,6 @@ function Card({ title, description, image, price, category }) {
   const minusDrink = () => setQuantity((prevQuantity) => prevQuantity - 1);
   const numericPrice = parseFloat(price.replace("$", ""));
 
-  const buttonType = () => {
-    if (quantity === 0) {
-      return (
-        <Button className="order-button" text="Order Now" onClick={addDrink} />
-      );
-    } else {
-      return (
-        <div className="quantity-controls">
-          <Button className="adjust-button" text="-" onClick={minusDrink} />
-          <Button className="adjust-button" text="+" onClick={addDrink} />
-        </div>
-      );
-    }
-  };
-
   return (
     <div className="card">
       <img src={image} alt={title} className="card-image" />
@@ -39,7 +24,14 @@ function Card({ title, description, image, price, category }) {
           </p>
         </>
       )}
-      {buttonType()}
+      {quantity === 0 ? (
+        <Button className="order-button" text="Order Now" onClick={addDrink} />
+      ) : (
+        <div className="quantity-controls">
+          <Button className="adjust-button" text="-" onClick={minusDrink} />
+          <Button className="adjust-button" text="+" onClick={addDrink} />
+        </div>
+      )}
     </div>
   );
 }
